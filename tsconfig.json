@@ -19,11 +19,6 @@
         "isolatedModules": true,
         "jsx": "react-jsx",
         "baseUrl": "./src",
-        "paths": {
-            "@utils/*": [
-                "utils/*"
-            ]
-        }
     },
     "include": [
         "src"

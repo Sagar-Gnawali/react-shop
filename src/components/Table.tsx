@@ -60,15 +60,12 @@ function Table<T>({ data, columns, onRowClick }: TableProps<T>) {
                     <span className="sort-icon">
                       {sortConfig && sortConfig.key === column.key ? (
                         sortConfig.direction === "asc" ? (
-                          // <FaSortUp />
-                          <span>A</span>
+                          <span>&#8593;</span>
                         ) : (
-                          <span>D</span>
-                          // <FaSortDown />
+                          <span>&#8595;</span>
                         )
                       ) : (
-                        <span>S</span>
-                        // <FaSort />
+                        <span>&#8597;</span>
                       )}
                     </span>
                   )}

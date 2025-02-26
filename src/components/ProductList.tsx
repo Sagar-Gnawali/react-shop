@@ -1,30 +1,18 @@
-import { useQuery } from "@tanstack/react-query";
-import { getAllProducts } from "api/product.api";
 import React from "react";
-import Table from "./Table";
-import { Product } from "types/product";
+import { useQuery } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
+import { getAllProducts } from "services/product.service";
+import { Product } from "types/product";
+import Table from "./Table";
+import { PRODUCT_COLUMNS, PRODUCT_KEY } from "utils/constant";
+
 const ProductList: React.FC = () => {
   const { isLoading, data } = useQuery({
-    queryKey: ["products"], // need to move this constat later
+    queryKey: [PRODUCT_KEY.all],
     queryFn: getAllProducts,
   });
   const nagivation = useNavigate();
 
-  const columns: {
-    key: keyof Product;
-    label: string;
-    sortable?: boolean;
-  }[] = [
-    { key: "id", label: "ID", sortable: true },
-    { key: "category", label: "Category" },
-    { key: "minimumOrderQuantity", label: "Min" },
-    { key: "price", label: "Price", sortable: true },
-    { key: "rating", label: "Rating" },
-    { key: "availabilityStatus", label: "Stock" },
-    // { key: "availabilityStatus", label: "Status" },
-    { key: "title", label: "Title", sortable: true },
-  ];
   if (isLoading) return <div>Loading...</div>;
   const onRowClick = (row: Product) => {
     nagivation(`/product/${row.id}`);
@@ -34,7 +22,7 @@ const ProductList: React.FC = () => {
       <h2>Product List</h2>
       <Table<Product>
         data={data?.products}
-        columns={columns}
+        columns={PRODUCT_COLUMNS}
         onRowClick={onRowClick}
       />
     </div>
