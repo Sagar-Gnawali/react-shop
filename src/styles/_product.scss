@@ -98,6 +98,7 @@
   border-radius: 8px;
   border: 1px solid $warning;
 }
+// Reviews
 .review-container {
   background-color: #f9f9f9;
   padding: 20px;
@@ -115,6 +116,7 @@
   }
 }
 
+// Avatar
 .avatar {
   width: 30px;
   height: 30px;
@@ -128,4 +130,42 @@
   font-weight: bold;
   text-transform: uppercase;
   user-select: none;
+}
+
+// Specifications
+.specification-container {
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.specification-container h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.specification-list {
+  list-style: none;
+  padding: 0;
+}
+
+.specification-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #555;
+}
+
+.specification-icon {
+  font-size: 20px;
+  color: grey;
+  margin-right: 10px;
+}
+
+.specification-text {
+  flex: 1;
 }
