@@ -1,0 +1,64 @@
+// Product ratings
+.star-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.star-rating button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 24px;
+}
+
+.star-rating .star {
+  color: #ccc;
+}
+
+.star-rating .on .star {
+  color: #ffc107;
+}
+
+.star-rating .off .star {
+  color: #ccc;
+}
+
+// Policy
+.policy-container {
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.policy-container h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.policy-list {
+  list-style: none;
+  padding: 0;
+}
+
+.policy-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #555;
+}
+
+.policy-icon {
+  font-size: 20px;
+  color: #4caf50;
+  margin-right: 10px;
+}
+
+.policy-text {
+  flex: 1;
+}
