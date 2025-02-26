@@ -1,3 +1,9 @@
+interface Reviews {
+  rating: number;
+  comment: string;
+  reviewerEmail: string;
+  reviewerName: string;
+}
 export interface Product {
   id: number;
   title: string;
@@ -12,6 +18,11 @@ export interface Product {
   thumbnail: string;
   images: string[];
   minimumOrderQuantity: number;
+  returnPolicy: string;
+  warrantyInformation: string;
+  reviews: Reviews[];
+  weight: number;
+  shippingInformation: string;
 }
 
 export interface ProductsResponse {
