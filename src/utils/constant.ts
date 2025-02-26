@@ -20,3 +20,6 @@ export const PRODUCT_COLUMNS: {
   { key: "availabilityStatus", label: "Stock" },
   { key: "title", label: "Title", sortable: true },
 ];
+export const ROUTE_PATHS = {
+  HOME: "/",
+};
