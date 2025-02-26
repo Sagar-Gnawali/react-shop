@@ -1,6 +1,5 @@
 import { Product, ProductsResponse } from "types/product";
-
-const BASE_URL = "https://dummyjson.com/products";
+import { BASE_URL } from "utils/constant";
 
 export const getAllProducts = async (): Promise<ProductsResponse> => {
   const response = await fetch(BASE_URL);

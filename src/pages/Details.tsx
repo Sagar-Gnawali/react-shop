@@ -8,12 +8,13 @@ import { Specifications } from "components/Specification";
 import { StockIndicator } from "components/StockIndicator";
 import Rating from "components/Rating";
 import ImageContainer from "components/Image";
+import { PRODUCT_KEY } from "utils/constant";
 
 export const Details = () => {
   const { id } = useParams();
   const productId = parseInt(id ? id : "");
   const { isLoading, data } = useQuery({
-    queryKey: ["productDetails", id],
+    queryKey: [PRODUCT_KEY.productDetails, id],
     queryFn: () => getProductById(productId),
   });
 
