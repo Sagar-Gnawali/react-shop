@@ -14,7 +14,7 @@ export const PRODUCT_COLUMNS: {
 }[] = [
   { key: "id", label: "ID", sortable: true },
   { key: "category", label: "Category" },
-  { key: "minimumOrderQuantity", label: "Min" },
+  { key: "minimumOrderQuantity", label: "Min", sortable: true },
   { key: "price", label: "Price", sortable: true },
   { key: "rating", label: "Rating" },
   { key: "availabilityStatus", label: "Stock" },
