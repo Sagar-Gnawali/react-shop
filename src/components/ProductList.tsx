@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { getAllProducts } from "api/product.api";
+import { getAllProducts } from "services/product.service";
 import React from "react";
 import Table from "./Table";
 import { Product } from "types/product";

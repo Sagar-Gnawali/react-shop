@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { getProductById } from "api/product.api";
+import { getProductById } from "services/product.service";
 import { Policy } from "components/Policy";
 import { Reviewss } from "components/Reviews";
 import { ShippingInfo } from "components/ShippingInfo";
