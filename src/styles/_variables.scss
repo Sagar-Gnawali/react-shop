@@ -1,3 +1,8 @@
 $font--text-color: "black";
 $color--grey-100: "#f5f5f5";
 $color--primary-main: "#007bff";
+
+$stock-status-colors: (
+  in-stock: #4caf50,
+  low-stock: #ff9800,
+);

@@ -1,3 +1,5 @@
+@import "./_variables.scss";
+
 // Product ratings
 .star-rating {
   display: flex;
@@ -61,4 +63,17 @@
 
 .policy-text {
   flex: 1;
+}
+
+// Stock indicator
+.stock-indicator {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: capitalize;
+  @each $status, $color in $stock-status-colors {
+    &.#{$status} {
+      color: $color;
+    }
+  }
 }
