@@ -12,7 +12,7 @@ export const PRODUCT_COLUMNS: {
   label: string;
   sortable?: boolean;
 }[] = [
-  { key: "id", label: "ID", sortable: true },
+  { key: "brand", label: "Brand", sortable: true },
   { key: "category", label: "Category" },
   { key: "minimumOrderQuantity", label: "Min", sortable: true },
   { key: "price", label: "Price", sortable: true },
