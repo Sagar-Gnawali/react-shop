@@ -1,8 +1,8 @@
 .container {
-  display: flex;
+  display: grid;
   height: 100vh;
+  grid-template-columns: 1fr 1fr;
   &__right {
-    width: 500px;
     border-left: 1px solid #ccc;
     padding: 20px;
     flex: 1;
@@ -16,11 +16,11 @@
   }
   @media (max-width: 750px) {
     &__left {
-      display: none;
+      width: 90%;
+      border-left: none;
     }
     &__right {
-      width: 100%;
-      border-left: none;
+      display: none;
     }
   }
 }

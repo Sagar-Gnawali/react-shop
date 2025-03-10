@@ -82,7 +82,7 @@ function Table<T>({ data, columns, onRowClick }: TableProps<T>) {
                   key={column.key.toString()}
                   onClick={() => onRowClick && onRowClick(row)}
                 >
-                  {row[column.key] as React.ReactNode}
+                  {row[column.key] ?? ("-" as React.ReactNode)}
                 </td>
               ))}
             </tr>
