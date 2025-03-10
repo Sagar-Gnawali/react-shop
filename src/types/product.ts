@@ -4,6 +4,12 @@ interface Reviews {
   reviewerEmail: string;
   reviewerName: string;
 }
+interface Meta {
+  createdAt?: Date;
+  updatedAt?: Date;
+  barcode?: string;
+  qrCode?: string;
+}
 export interface Product {
   id: number;
   title: string;
@@ -22,7 +28,9 @@ export interface Product {
   warrantyInformation: string;
   reviews: Reviews[];
   weight: number;
+  sku?: string;
   shippingInformation: string;
+  meta?: Meta;
 }
 
 export interface ProductsResponse {

@@ -3,10 +3,12 @@ interface ImageContainerPropTypes {
   width?: string;
   height?: string;
   isThumbnail?: boolean;
+  alt?: string;
+  className?: string;
 }
 
 const ImageContainer = (props: ImageContainerPropTypes) => {
-  const { src, width, height, isThumbnail } = props;
+  const { src, width, height, isThumbnail, alt, ...rest } = props;
   if (!src) return null;
   return (
     <div
@@ -16,8 +18,10 @@ const ImageContainer = (props: ImageContainerPropTypes) => {
     >
       <img
         src={src}
+        alt={alt ?? "img-contaner"}
         width={width ? width : "50px"}
         height={height ? height : "50px"}
+        {...rest}
       />
     </div>
   );

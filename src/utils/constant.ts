@@ -12,13 +12,9 @@ export const PRODUCT_COLUMNS: {
   label: string;
   sortable?: boolean;
 }[] = [
-  { key: "brand", label: "Brand", sortable: true },
-  { key: "category", label: "Category" },
-  { key: "minimumOrderQuantity", label: "Min", sortable: true },
-  { key: "price", label: "Price", sortable: true },
-  { key: "rating", label: "Rating" },
+  { key: "brand", label: "Brand", sortable: false },
+  { key: "price", label: "Price", sortable: false },
   { key: "availabilityStatus", label: "Stock" },
-  { key: "title", label: "Title", sortable: true },
 ];
 export const ROUTE_PATHS = {
   HOME: "/",

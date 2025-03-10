@@ -19,6 +19,7 @@ export const Details = () => {
   });
 
   if (isLoading) return <p>Loading...</p>;
+  if (!data) return <p>OOPS! No data found</p>;
 
   return (
     <div className="product-container">
